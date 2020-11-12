@@ -9,16 +9,23 @@ namespace CityBuilder.Overworld
         Dictionary<Province, GameObject> provinceGameobjectMap = new Dictionary<Province, GameObject>();
         GameObject selectedObject;
 
-        // Start is called before the first frame update
-        void Start()
+        public void SetSelectedObject(GameObject go)
         {
-
+            if (selectedObject != go)
+            {
+                selectedObject = go;
+                Debug.Log("Selected a GameObject");
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        public void DeselectObject()
         {
+            selectedObject = null;
+        }
 
+        public bool Contains(GameObject go)
+        {
+            return selectedObject = go;
         }
     }
 
