@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace CityBuilder.Overworld
 {
@@ -9,7 +7,8 @@ namespace CityBuilder.Overworld
     {
         GameObject hoveredObject;
         OverworldSelection overworldSelection;
-        float maxRayDist = 1000f;
+        readonly float maxRayDist = 1000f;
+        bool isHoveringOverUI = false;
 
         private void Awake()
         {
@@ -18,14 +17,28 @@ namespace CityBuilder.Overworld
 
         private void Update()
         {
+            CheckUIClick();
             CheckCursor();
             //InteractWithMovement();
-            //PointSelection();
         }
 
-        private void PointSelection()
+        private void CheckUIClick()
         {
-            
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                isHoveringOverUI = true;
+            } else
+            {
+                isHoveringOverUI = false;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    return;
+                }
+            }
         }
 
         private void InteractWithMovement()
@@ -35,23 +48,26 @@ namespace CityBuilder.Overworld
 
         private void CheckCursor()
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            LayerMask provinceMask = LayerMask.GetMask("Province");
-            bool hasHit = Physics.Raycast(ray, out hitInfo, maxRayDist, provinceMask);
+            if (!isHoveringOverUI)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hitInfo;
+                LayerMask provinceMask = LayerMask.GetMask("Province");
+                bool hasHit = Physics.Raycast(ray, out hitInfo, maxRayDist, provinceMask);
 
-            if (hasHit)
-            {
-                GameObject go = hitInfo.collider.gameObject;
-                if (Input.GetMouseButtonDown(0))
+                if (hasHit)
                 {
-                    overworldSelection.SetSelectedObject(go);
+                    GameObject go = hitInfo.collider.gameObject;
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        overworldSelection.SetSelectedObject(go);
+                    }
+                    HoveredObject(go);
                 }
-                HoveredObject(go);
-            }
-            else
-            {
-                ClearSelection();
+                else
+                {
+                    ClearSelection();
+                }
             }
         }
 

@@ -463,7 +463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4556f27641dee5d45a8c499326da0732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armyMainScreen: {fileID: 0}
 --- !u!1 &129672059 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7414724669650903789, guid: c8e6a13a41ff84b45bee5e510cf6f487,
@@ -565,12 +564,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 0f5f5d943eec33844b0601c79e5df61a, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 134194381}
+        m_MethodName: ToggleArmyMainUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -624,6 +623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5f5d943eec33844b0601c79e5df61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armyMainScreen: {fileID: 122886095}
+  armyMainPanel: {fileID: 1658297552}
 --- !u!1 &146380083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3666,7 +3667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1658297553
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3736,7 +3737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4556f27641dee5d45a8c499326da0732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armyMainScreen: {fileID: 0}
 --- !u!1 &1698277230
 GameObject:
   m_ObjectHideFlags: 0

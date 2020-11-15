@@ -6,26 +6,23 @@ namespace CityBuilder.UI
 {
     public class OverworldArmyButton : MonoBehaviour
     {
-        GameObject armyMainUI;
-        bool isArmyUIOpen = false;
-        
+        [SerializeField] public GameObject armyMainScreen;
+        [SerializeField] public GameObject armyMainPanel;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            armyMainUI = FindObjectOfType<ArmyMainUI>().gameObject;
-        }
+        bool isArmyUIOpen = false;
 
         public void ToggleArmyMainUI()
         {
             if (isArmyUIOpen)
             {
                 isArmyUIOpen = false;
-                armyMainUI.SetActive(false);
+                armyMainScreen.SetActive(false);
+                armyMainPanel.SetActive(false);
             } else
             {
                 isArmyUIOpen = true;
-                armyMainUI.SetActive(true);
+                armyMainScreen.SetActive(true);
+                armyMainPanel.SetActive(true);
             }
         }
     }
