@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,19 +19,35 @@ namespace CityBuilder.Overworld
         private void Update()
         {
             CheckCursor();
+            //InteractWithMovement();
+            //PointSelection();
+        }
+
+        private void PointSelection()
+        {
+            
+        }
+
+        private void InteractWithMovement()
+        {
+            
         }
 
         private void CheckCursor()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            bool hasHit = Physics.Raycast(ray, out hitInfo, maxRayDist);
+            LayerMask provinceMask = LayerMask.GetMask("Province");
+            bool hasHit = Physics.Raycast(ray, out hitInfo, maxRayDist, provinceMask);
 
             if (hasHit)
             {
-                GameObject hitObject = hitInfo.transform.GetComponentInChildren<Province>().gameObject;
-
-                HoveredObject(hitObject);
+                GameObject go = hitInfo.collider.gameObject;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    overworldSelection.SetSelectedObject(go);
+                }
+                HoveredObject(go);
             }
             else
             {

@@ -14,7 +14,7 @@ namespace CityBuilder.Overworld
             if (selectedObject != go)
             {
                 selectedObject = go;
-                Debug.Log("Selected a GameObject");
+                Debug.Log("Selected GameObject " + selectedObject);
             }
         }
 
@@ -23,7 +23,7 @@ namespace CityBuilder.Overworld
             selectedObject = null;
         }
 
-        public bool Contains(GameObject go)
+        public bool IsSelected(GameObject go)
         {
             return selectedObject = go;
         }
