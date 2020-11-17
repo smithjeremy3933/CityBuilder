@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProvinceNode : MonoBehaviour
+namespace CityBuilder.Overworld
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ProvinceNode : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] public ProvinceNode[] neighborNodes; 
+        public bool isExplored = false;
+        public ProvinceNode previous;
     }
 }
+

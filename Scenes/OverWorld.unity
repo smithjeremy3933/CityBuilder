@@ -2431,6 +2431,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7519337906738594382, guid: d71f33958b14ffe47a6103326f0d8793,
+        type: 3}
+      propertyPath: neighborNodes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519337906738594382, guid: d71f33958b14ffe47a6103326f0d8793,
+        type: 3}
+      propertyPath: neighborNodes.Array.data[0]
+      value: 
+      objectReference: {fileID: 890063402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71f33958b14ffe47a6103326f0d8793, type: 3}
 --- !u!1 &824348851
@@ -2587,6 +2597,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869628129}
   m_CullTransparentMesh: 0
+--- !u!114 &890063402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7519337906738594382, guid: d71f33958b14ffe47a6103326f0d8793,
+    type: 3}
+  m_PrefabInstance: {fileID: 4957950656107365754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9a68151eb42274e977456f1112899f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &921498110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3841148322426262944, guid: 99b5eae16ff86784fa3a92b5ec460c81,
@@ -2908,6 +2930,8 @@ GameObject:
   - component: {fileID: 1141556949}
   - component: {fileID: 1141556948}
   - component: {fileID: 1141556947}
+  - component: {fileID: 1141556950}
+  - component: {fileID: 1141556951}
   m_Layer: 0
   m_Name: Overworld Controller
   m_TagString: Untagged
@@ -2953,6 +2977,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1141556950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141556946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41fad470037d0ad47a8557d95525a60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overworldArmyGO: {fileID: 7770419543324124091, guid: fe3b20d2f1b659e4ab2319aa6f591d4f,
+    type: 3}
+--- !u!114 &1141556951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141556946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a3b30cd67f49244894a129167d5cdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1155751367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,6 +3534,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392245810}
   m_CullTransparentMesh: 0
+--- !u!114 &1477179345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7519337906738594382, guid: d71f33958b14ffe47a6103326f0d8793,
+    type: 3}
+  m_PrefabInstance: {fileID: 789798809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9a68151eb42274e977456f1112899f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1479504254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2735626199536732271, guid: d71f33958b14ffe47a6103326f0d8793,
@@ -4927,6 +4989,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7519337906738594382, guid: d71f33958b14ffe47a6103326f0d8793,
+        type: 3}
+      propertyPath: neighborNodes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519337906738594382, guid: d71f33958b14ffe47a6103326f0d8793,
+        type: 3}
+      propertyPath: neighborNodes.Array.data[0]
+      value: 
+      objectReference: {fileID: 1477179345}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71f33958b14ffe47a6103326f0d8793, type: 3}
 --- !u!1001 &6218115278983566584
