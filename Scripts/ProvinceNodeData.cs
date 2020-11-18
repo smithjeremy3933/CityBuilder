@@ -12,13 +12,14 @@ namespace CityBuilder.Overworld
         public List<ProvinceNodeData> neighbors = new List<ProvinceNodeData>();
         public Province province;
         public ProvinceNode provinceNode;
+        public Vector3 position;
+
         public float distanceTravled = Mathf.Infinity;
         public float priority;
 
         public ProvinceNodeData(ProvinceNode provinceNode)
         {
             this.provinceNode = provinceNode;
-            //this.neighbors = provinceNode.neighborNodes.ToList();
         }
 
         public int CompareTo(ProvinceNodeData other)
