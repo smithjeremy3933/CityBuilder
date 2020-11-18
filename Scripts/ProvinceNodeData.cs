@@ -9,7 +9,7 @@ namespace CityBuilder.Overworld
     public class ProvinceNodeData : IComparable<ProvinceNodeData>
     {
         public ProvinceNodeData previous = null;
-        public List<ProvinceNodeData> neighbors = new List<ProvinceNodeData>();
+        List<ProvinceNodeData> neighbors = new List<ProvinceNodeData>();
         public Province province;
         public ProvinceNode provinceNode;
         public Vector3 position;
@@ -17,9 +17,13 @@ namespace CityBuilder.Overworld
         public float distanceTravled = Mathf.Infinity;
         public float priority;
 
-        public ProvinceNodeData(ProvinceNode provinceNode)
+        public List<ProvinceNodeData> Neighbors { get => neighbors; set => neighbors = value; }
+
+        public ProvinceNodeData(ProvinceNode provinceNode, Province province, Vector3 position)
         {
             this.provinceNode = provinceNode;
+            this.province = province;
+            this.position = position;
         }
 
         public int CompareTo(ProvinceNodeData other)

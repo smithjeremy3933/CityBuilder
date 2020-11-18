@@ -18,25 +18,18 @@ namespace CityBuilder.Overworld
         private void InitOWGraph()
         {
             allProvinceNodes = FindObjectsOfType<ProvinceNode>();
-            Debug.Log(allProvinceNodes.Length);
+            ProvinceDatabase provinceDatabase = new ProvinceDatabase();
             foreach (ProvinceNode provinceNode in allProvinceNodes)
             {
                 ProvinceNode[] neighborNodes = provinceNode.neighborNodes;
-                ProvinceNodeData newProvinceNodeData = new ProvinceNodeData(provinceNode)
-                {
-                    position = provinceNode.transform.position,
-                    provinceNode = provinceNode
-                };
+                ProvinceNodeData newProvinceNodeData = new ProvinceNodeData(provinceNode, provinceNode.province, provinceNode.transform.position);
                 foreach (ProvinceNode neighborNode in neighborNodes)
                 {
-                    ProvinceNodeData newNeighborNodeData = new ProvinceNodeData(neighborNode)
-                    {
-                        position = neighborNode.transform.position,
-                        provinceNode = neighborNode
-                    };
-                    newProvinceNodeData.neighbors.Add(newNeighborNodeData);
+                    ProvinceNodeData newNeighborNodeData = new ProvinceNodeData(neighborNode, neighborNode.province, neighborNode.transform.position);
+                    newProvinceNodeData.Neighbors.Add(newNeighborNodeData);
                 }
-                adjList[newProvinceNodeData] = newProvinceNodeData.neighbors;
+                provinceDatabase.AddProvinceData(new ProvinceData(provinceNode.province, provinceNode, newProvinceNodeData));
+                adjList[newProvinceNodeData] = newProvinceNodeData.Neighbors;
             }         
         }
     }

@@ -6,7 +6,8 @@ namespace CityBuilder.Overworld
 {
     public class ProvinceNode : MonoBehaviour
     {
-        [SerializeField] public ProvinceNode[] neighborNodes; 
+        [SerializeField] public ProvinceNode[] neighborNodes;
+        [SerializeField] public Province province;
     }
 }
 
