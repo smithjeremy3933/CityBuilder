@@ -15,15 +15,18 @@ namespace CityBuilder.UI
         {
             if (isArmyUIOpen)
             {
-                isArmyUIOpen = false;
-                armyMainScreen.SetActive(false);
-                armyMainPanel.SetActive(false);
+                ToggleState(false);
             } else
             {
-                isArmyUIOpen = true;
-                armyMainScreen.SetActive(true);
-                armyMainPanel.SetActive(true);
+                ToggleState(true);
             }
+        }
+
+        void ToggleState(bool state)
+        {
+            isArmyUIOpen = state;
+            armyMainScreen.SetActive(state);
+            armyMainPanel.SetActive(state);
         }
     }
 }

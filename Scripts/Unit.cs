@@ -8,7 +8,8 @@ namespace CityBuilder.Units
     public enum UnitAlignment
     {
         player = 0,
-        enemy = 1
+        enemy = 1,
+        neutral = 2
     }
 
     public class Unit

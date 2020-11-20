@@ -20,6 +20,11 @@ namespace CityBuilder.Overworld
                 provinceDataList.Add(provinceData);
             }
         }
+
+        public ProvinceData GetProvinceDataByIdx(int index)
+        {
+            return provinceDataList[index];
+        }
     }
 }
 

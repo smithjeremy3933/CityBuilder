@@ -7,11 +7,24 @@ namespace CityBuilder.Overworld
 {
     public class OverworldArmy
     {
-        Province currentProvince;
-        ProvinceNode currentProvinceNode;
-        ProvinceNodeData currentNode;
-        bool isRaised = false;
-        List<Unit> units = new List<Unit>();
+        Province _province;
+        ProvinceData _provinceData;
+        ProvinceNode _provinceNode;
+        ProvinceNodeData _provinceNodeData;
+        public bool isRaised = false;
+        public List<Unit> units = new List<Unit>();
+        Vector3 _position;
+        UnitAlignment _unitAlignment;
+
+        public Vector3 Position { get => _position; set => _position = value; }
+
+        public OverworldArmy(ProvinceData provinceData, UnitAlignment unitAlignment) 
+        {
+            this._provinceData = provinceData;
+            this._provinceNodeData = provinceData.ProvinceNodeData;
+            this._position = _provinceNodeData.Position;
+            this._unitAlignment = unitAlignment;
+        }
     }
 }
 

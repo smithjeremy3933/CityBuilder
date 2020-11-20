@@ -7,12 +7,20 @@ namespace CityBuilder.Overworld
     {
         GameObject hoveredObject;
         OverworldSelection overworldSelection;
+        OverworldGraph overworldGraph;
+
         readonly float maxRayDist = 1000f;
         bool isHoveringOverUI = false;
 
         private void Awake()
         {
             overworldSelection = GetComponent<OverworldSelection>();
+            overworldGraph = GetComponent<OverworldGraph>();
+        }
+
+        private void Start()
+        {
+            overworldGraph.InitOWGraph();
         }
 
         private void Update()

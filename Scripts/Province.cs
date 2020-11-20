@@ -6,7 +6,12 @@ namespace CityBuilder.Overworld
 {
     public class Province : MonoBehaviour
     {
-        
+        ProvinceData _provinceData;
+
+        public void Init(ProvinceData provinceData)
+        {
+            _provinceData = provinceData;
+        }
     }
 }
 
