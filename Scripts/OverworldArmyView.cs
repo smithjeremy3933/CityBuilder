@@ -13,7 +13,7 @@ namespace CityBuilder.Overworld
         {
             if (overworldArmyGO != null)
             {
-                gameObject.name = "Army from Province 0";
+                gameObject.name = overworldArmy.Name;
                 gameObject.transform.position = overworldArmy.Position;
             }
         }

@@ -41,7 +41,7 @@ namespace CityBuilder.Overworld
             province0.ProvinceControl = ProvinceControl.player;
             OverworldArmy overworldArmy = new OverworldArmy(province0, UnitAlignment.player);
             province0.SetOWArmy(overworldArmy);
-
+            Debug.Log(province0.provinceID);
         }
     }
 }

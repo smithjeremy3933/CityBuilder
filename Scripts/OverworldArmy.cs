@@ -15,8 +15,10 @@ namespace CityBuilder.Overworld
         public List<Unit> units = new List<Unit>();
         Vector3 _position;
         UnitAlignment _unitAlignment;
+        string name;
 
         public Vector3 Position { get => _position; set => _position = value; }
+        public string Name { get => name; }
 
         public OverworldArmy(ProvinceData provinceData, UnitAlignment unitAlignment) 
         {
@@ -24,6 +26,7 @@ namespace CityBuilder.Overworld
             this._provinceNodeData = provinceData.ProvinceNodeData;
             this._position = _provinceNodeData.Position;
             this._unitAlignment = unitAlignment;
+            this.name = "Army from " + provinceData.Name;
         }
     }
 }
