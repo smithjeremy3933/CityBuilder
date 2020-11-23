@@ -4,14 +4,9 @@ using UnityEngine;
 
 namespace CityBuilder.Overworld
 {
-    public class ProvinceDatabase
+    public class ProvinceDatabase : MonoBehaviour
     {
         List<ProvinceData> provinceDataList = new List<ProvinceData>();
-
-        public ProvinceDatabase()
-        {
-
-        }
 
         public void AddProvinceData(ProvinceData provinceData)
         {
@@ -24,6 +19,19 @@ namespace CityBuilder.Overworld
         public ProvinceData GetProvinceDataByIdx(int index)
         {
             return provinceDataList[index];
+        }
+
+        public List<ProvinceData> GetProvincesWithPlayerArmy()
+        {
+            List<ProvinceData> provinces = new List<ProvinceData>();
+            foreach (ProvinceData province in provinceDataList)
+            {
+                if (province.ProvinceControl == ProvinceControl.player && province.OverworldArmy != null)
+                {
+                    provinces.Add(province);
+                }
+            }
+            return provinces;
         }
     }
 }

@@ -38,6 +38,7 @@ namespace CityBuilder.Overworld
         public ProvinceControl ProvinceControl { get => provinceControl; set => provinceControl = value; }
         public string Name { get => name; }
         public ProvinceNodeData ProvinceNodeData { get => provinceNodeData; }
+        public OverworldArmy OverworldArmy { get => _overworldArmy; set => _overworldArmy = value; }
 
         public void SetOWArmy(OverworldArmy overworldArmy)
         {

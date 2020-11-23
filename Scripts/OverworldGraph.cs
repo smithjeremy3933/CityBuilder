@@ -18,7 +18,7 @@ namespace CityBuilder.Overworld
         public void InitOWGraph()
         {
             allProvinceNodes = FindObjectsOfType<ProvinceNode>();
-            provinceDatabase = new ProvinceDatabase();
+            provinceDatabase = GetComponent<ProvinceDatabase>();
             foreach (ProvinceNode provinceNode in allProvinceNodes)
             {
                 ProvinceNode[] neighborNodes = provinceNode.neighborNodes;

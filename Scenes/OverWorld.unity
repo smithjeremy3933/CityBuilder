@@ -2949,6 +2949,8 @@ GameObject:
   - component: {fileID: 1141556947}
   - component: {fileID: 1141556950}
   - component: {fileID: 1141556951}
+  - component: {fileID: 1141556952}
+  - component: {fileID: 1141556953}
   m_Layer: 0
   m_Name: Overworld Controller
   m_TagString: Untagged
@@ -3018,6 +3020,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34a3b30cd67f49244894a129167d5cdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1141556952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141556946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e5981a226884243a105f3770b7150d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1141556953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141556946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac83722aec7d1bc429a7fbeede053ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1155751367
@@ -3739,7 +3765,6 @@ GameObject:
   - component: {fileID: 1658297553}
   - component: {fileID: 1658297555}
   - component: {fileID: 1658297554}
-  - component: {fileID: 1658297556}
   m_Layer: 5
   m_Name: Military Overview Panel
   m_TagString: Untagged
@@ -3804,18 +3829,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658297552}
   m_CullTransparentMesh: 0
---- !u!114 &1658297556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658297552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4556f27641dee5d45a8c499326da0732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1698277230
 GameObject:
   m_ObjectHideFlags: 0
