@@ -8,6 +8,7 @@ namespace CityBuilder.UI
     {
         [SerializeField] public GameObject armyMainScreen;
         [SerializeField] public GameObject armyMainPanel;
+        ArmyPanelUI armyPanelUI;
 
         bool isArmyUIOpen = false;
 
@@ -19,6 +20,8 @@ namespace CityBuilder.UI
             } else
             {
                 ToggleState(true);
+                armyPanelUI = FindObjectOfType<ArmyPanelUI>();
+                armyPanelUI.UpdateArmyMainUI();
             }
         }
 

@@ -7,20 +7,7 @@ namespace CityBuilder.UI
 {
     public class ArmyMainUI : MonoBehaviour
     {
-        ProvinceDatabase provinceDatabase;
-        List<ProvinceData> provincesWithPlayerArmy;
-
-        void Start()
-        {
-            provinceDatabase = FindObjectOfType<ProvinceDatabase>();
-            provincesWithPlayerArmy = provinceDatabase.GetProvincesWithPlayerArmy();
-            Debug.Log(provincesWithPlayerArmy.Count);
-        }
-
-        void Update()
-        {
-
-        }
+        
     }
 }
 

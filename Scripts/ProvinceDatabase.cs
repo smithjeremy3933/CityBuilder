@@ -33,6 +33,21 @@ namespace CityBuilder.Overworld
             }
             return provinces;
         }
+
+        public List<ProvinceData> GetAllPlayerProvinces()
+        {
+            List<ProvinceData> provinces = new List<ProvinceData>();
+            {
+                foreach (ProvinceData province in provinceDataList)
+                {
+                    if (province.ProvinceControl == ProvinceControl.player)
+                    {
+                        provinces.Add(province);
+                    }
+                }
+            }
+            return provinces;
+        }
     }
 }
 
